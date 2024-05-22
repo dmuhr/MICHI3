@@ -166,9 +166,9 @@ In all cases, you can select `All` / `Single`. In `All`, it will listen to any M
 - MICHI3 CueLoader: The scenes need to be set by automation before the note hits, not at the same time. This is a limitation of Ableton, which gives less priority to processing automation information. 
   - Solution: Set `Scene`, `Cue`, or `Subscene` a bar before hitting the go with a MIDI note.
 - If you edit one of the Max for Live patches and have already saved information in multiple MICHI3 objects, there is a chance that all that information will disappear, and the objects will become completely empty (not even the default functions will show up). This is a bug in Ableton that will hopefully be fixed in Ableton 12.
-  - Solution: Occasionally, save all your MICHI3 object settings as Ableton `Preset`. Then, if they all get corrupt, you can recall the presets by name. This problem only happened three times in two years, but once it was a disaster. Always save versions.
+  - Solution: Occasionally, save all your MICHI3 object settings as Ableton `Preset`. Then, if they all get corrupt, you can recall the presets by name. This problem only happened three times in two years, but once it was a disaster. Always save versions :)
 
-## Buy me a coffee :)
+## Buy me a coffee !!
 
 If you found this useful please support me with a coffee!
 
