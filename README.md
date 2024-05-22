@@ -20,6 +20,37 @@ MICHI3 can:
 - Talk to different consoles/computers at the same time.
 - Mute/solo MIDI tracks, independent of their output settings. 
 
+## Objects 
+
+MICHI3 contains 4 different objects that can be used independently, and as many times as you wish inside your Ableton session (except MICHI3 Server). 
+
+### MICHI3_Server
+
+*Must be used only once!*
+- Receives all OSC data and streams it to a Console or ONPC.
+
+### MICHI3_Single
+
+- The most basic object.
+- The only one that can read CC and automation curves.
+
+### MICHI3_Multi
+
+- 8x MICHI3_Single
+- Reads only in single`NOTE` mode.
+
+### MICHI3_CueLoader
+
+- Specific for dealing with long cuelists.
+- The only one that can send `Goto` / `load` commands. 
+- Has separate MIDI assignments for cue, fader, button and `Off`. 
+- Cues can be called by Number or Name, choose in the config tab opening with the little arrow. 
+    - When calling by number, use the `CueNum` automation track. 
+    - When calling by name, use the `CueScene` automation track, to call by Letter, i.e. "B".
+    - Alternative: You can also form names with `CueScene` and `CueNum`, i.e. "B4".
+    - Alternative 2: You can also form names with `CueScene`, `CueNum` and `CueSubNum`. They will be formated with a dash in between, i.e. "B4-3". 
+    - *IMPORTANT!* When calling cues by Name, their names need to be exactly the same in the cuelist.
+
 ## Setup
 
 - Connect computer and console by ethernet. 
@@ -68,6 +99,7 @@ in Ableton:
 - Draw a midi note with a velocity higher than 0.
 
 When the note is on in Ableton, in MA3 the button will be pressed with the function `Temp` and the fader will get the velocity of the midi note, scaled to `faderMaster`.
+
 
 ## Details
 
@@ -121,37 +153,7 @@ Destination
   - Server would mean it all goes to MICHI3_Server, which should be accesible in a MIDI track. 
   - Console means the OSC goes directly to the specified IP and port. 
 
-## Objects 
 
-MICHI3 contains 4 different objects that can be used independently, and as many times as you wish inside your Ableton session (except MICHI3 Server). 
-
-
-### MICHI3_Server
-
-*Must be used only once!*
-- Receives all OSC data and streams it to a Console or ONPC.
-
-### MICHI3_Single
-
-- The most basic object.
-- The only one that can read CC and automation curves.
-
-### MICHI3_Multi
-
-- 8x MICHI3_Single
-- Reads only in single`NOTE` mode.
-
-### MICHI3_CueLoader
-
-- Specific for dealing with long cuelists.
-- The only one that can send `Goto` / `load` commands. 
-- Has separate MIDI assignments for cue, fader, button and `Off`. 
-- Cues can be called by Number or Name, choose in the config tab opening with the little arrow. 
-    - When calling by number, use the `CueNum` automation track. 
-    - When calling by name, use the `CueScene` automation track, to call by Letter, i.e. "B".
-    - Alternative: You can also form names with `CueScene` and `CueNum`, i.e. "B4".
-    - Alternative 2: You can also form names with `CueScene`, `CueNum` and `CueSubNum`. They will be formated with a dash in between, i.e. "B4-3". 
-    - *IMPORTANT!* When calling cues by Name, their names need to be exactly the same in the cuelist.
 
 ## Known limitations
 
