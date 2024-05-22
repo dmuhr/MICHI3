@@ -11,11 +11,13 @@ It provides an easy and intuitive way of using Live as a light sequencer togethe
 
 MICHI3 grabs midi information from Ableton Live and parses it as commands to MA3. It can read MIDI notes, MIDI CC or velocity curves, and then map them to both fader and buttons functions of MA3.
 
+MICHI3 contain the following functions:
 
-FaderCMD
-- MIDI Note: 
+Input types:
+- MIDI Note
 - MIDI CC
 - Automation
+
 
 ## Setup
 
@@ -47,16 +49,39 @@ Setup a new OSC receiver:
 ### Ableton Live
 
 - Save all MICHI3 objects in the same folder, you can also store then in your `Max MIDI Effect` folder, normally in: `/Users/[yourname]/Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect`
-  - Important: We only need the objects ending in `.amxd`. The rest are dependencies, but they all must be in the same folder.
+  - Important: You only need the objects ending in `.amxd`. The rest are dependencies, but they all must be in the same folder.
 - Drag/drop MICHI3_Server from the `Browser content` of Ableton, or directly from your Finder window, and set:
   - `Console IP`: The IP of your console or ONPC computer. If the same computer use 127.0.0.1
   - `Port`: 8880 (or the port you just set in the MA3 OSC settings)
-  - 
-Set:
-  -    
-  - 
-- 
-    - 
+
+## Quick start
+
+After you follow the setup instructions.
+
+In grandMA3:
+- Store a sequence, and give it a name.
+
+in Ableton:
+- Drag MICHI3_Single to a midi track.
+- Write the same name you gave to the sequence before.
+- Draw a midi note with a velocity higher than 0.
+
+When the note is on in Ableton, in MA3 the button will be pressed with the function `Temp` and the fader will get the velocity of the midi note, scaled to `faderMaster`.
+
+## Objects 
+
+MICHI3 contains 4 different objects that can be used independently, and as many times as you wish inside your Ableton session (except MICHI3 Server). 
+
+### MICHI3_Server
+
+*Must be used only once!*
+
+### MICHI3_Single
+
+### MICHI3_Multi
+
+### MICHI3_CueLoader
+
 
 
 
