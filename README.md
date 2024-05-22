@@ -26,20 +26,28 @@ MICHI3 contains 4 different objects that can be used independently, and as many 
 
 ### MICHI3_Server
 
+![MICHI3_Server](pics/MICHI3_Server.png)
+
 *Must be used only once!*
 - Receives all OSC data and streams it to a Console or ONPC.
 
 ### MICHI3_Single
+
+![MICHI3_Single](pics/MICHI3_Single.png)
 
 - The most basic object.
 - The only one that can read CC and automation curves.
 
 ### MICHI3_Multi
 
+![MICHI3_Multi](pics/MICHI3_Multi.png)
+
 - 8x MICHI3_Single
 - Reads only in single`NOTE` mode.
 
 ### MICHI3_CueLoader
+
+![MICHI3_CueLoader](pics/MICHI3_CueLoader.png)
 
 - Specific for dealing with long cuelists.
 - The only one that can send `Goto` / `load` commands. 
