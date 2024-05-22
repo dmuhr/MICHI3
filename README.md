@@ -64,7 +64,6 @@ MICHI3 includes four different objects that can be used independently, with the 
 
 1. Connect your computer and console via Ethernet.
 2. Set your computer and console network interfaces to be in the same IP range. This can be a separate network interface or the one where you run the session.
-3. Disable the firewall on the sending computer.
 
 ### grandMA3
 
